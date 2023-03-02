@@ -5,7 +5,7 @@ class fluentbit::service {
   assert_private()
 
   if $fluentbit::manage_service {
-    service { 'fluentbit':
+    service { 'fluent-bit':
       ensure     => $fluentbit::service_ensure,
       enable     => $fluentbit::service_enable,
       hasstatus  => $fluentbit::service_has_status,
