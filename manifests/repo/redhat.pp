@@ -16,7 +16,7 @@ class fluentbit::repo::redhat {
     fail("OS ${family}/${os_name} is not supported")l
   }
 
-  contain '::yum'
+  # contain '::yum'
 
   yumrepo { 'fluentbit':
     descr         => 'Official Treasure Data repository for Fluent-Bit',
