@@ -9,8 +9,6 @@ define fluentbit::input::tail_multiline (
   String $db                       = "/var/log/fluent-bit.db"
 
 ) {
-  $skip_long_lines_string = bool2str($skip_long_lines, 'On', 'Off')
-  $docker_mode_string = bool2str($docker_mode, 'On', 'Off')
 
   file { $configfile:
     ensure  => file,
