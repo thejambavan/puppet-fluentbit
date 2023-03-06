@@ -7,7 +7,8 @@ define fluentbit::filter::parser (
   String $configfile         = '/etc/fluent-bit/filter_parser.conf',
   String $match              = '*',
   String $key_name           = 'log',
-  String $parser             = 'my_parser,
+  String $parser             = 'my_parser'
+  ,
 ) {
   # create filter_parser.conf
   # TODO: concat for multiple entries
