@@ -204,7 +204,7 @@ class fluentbit (
     $name = $plugin['name']
 
     Resource["fluentbit::input::${name}"] {
-      "i${index}": * => merge($plugin['properties']);
+      "${index}": * => merge($plugin['properties']);
     }
   }
 
