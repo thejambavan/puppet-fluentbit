@@ -2,9 +2,8 @@
 # Filter to modify output
 [FILTER]
     # configure plugins
-    Name parser<%- if @match %>
-    Match <%= @match -%>
-<% end -%>
+    Name parser
+    Match <%= @match %>
     key_name <%= @key_name %>
     parser <%= @parser %>
 
