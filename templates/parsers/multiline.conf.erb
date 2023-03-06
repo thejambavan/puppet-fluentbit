@@ -1,0 +1,11 @@
+# Managed by puppet
+<% @multiline_parsers.each do | parser | -%>
+[MULTILINE_PARSER]
+    name <%= parser['name'] %>
+    type <%= parser['type'] %>
+    flush_timeout <%= parser['flush_timeout'] %>
+    rule "start_state" "<%= parser['start_rule'] %>" "cont"
+    rule "cont" "<%= parser['cont_rule'] %>" "cont"
+
+<% end -%>
+# <%= @multiline_parsers.length %> parser(s)

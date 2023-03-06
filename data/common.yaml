@@ -44,6 +44,9 @@ fluentbit::manage_streams_file: true
 fluentbit::streams_file: '/etc/td-agent-bit/streams.conf'
 fluentbit::streams: []
 
+fluentbit::manage_multiline_parsers_file: true
+fluentbit::multiline_parsers_file: '/etc/td-agent-bit/parsers-multiline.conf'
+
 fluentbit::manage_parsers_file: true
 fluentbit::parsers_file: '/etc/td-agent-bit/parsers.conf'
 fluentbit::parsers:
