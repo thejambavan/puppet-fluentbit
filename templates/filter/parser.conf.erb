@@ -1,0 +1,10 @@
+# Managed by puppet
+# Filter to modify output
+[FILTER]
+    # configure plugins
+    Name  modify<%- if @match %>
+    Match <%= @match -%>
+<% end -%>
+    key_name <%= key_name %>
+    parser <%= parser %>
+
