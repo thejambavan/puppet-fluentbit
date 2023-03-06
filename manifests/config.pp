@@ -54,9 +54,9 @@ class fluentbit::config {
     content => template('fluentbit/parsers.conf.erb'),
   }
 
-  file { $fluentbit::multiline_parsers_file:
-    content => template('fluentbit/parsers/multiline.conf.erb'),
-  }
+  #file { $fluentbit::multiline_parsers_file:
+  #  content => template('fluentbit/parsers/multiline.conf.erb'),
+  #}
 
   $plugins = $fluentbit::plugins
 
