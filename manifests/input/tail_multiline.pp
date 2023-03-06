@@ -5,7 +5,7 @@ define fluentbit::input::tail_multiline (
   Stdlib::Absolutepath $path,
   Stdlib::Absolutepath $configfile = "/etc/fluent-bit/input_tail_${name}.conf",
   String $multiline_parser,
-  Boolean $read_from_head          =  true,
+  String $read_from_head           =  true,
   String $db                       = "/var/log/fluent-bit.db"
 
 ) {
