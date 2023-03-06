@@ -105,6 +105,9 @@
 # @param manage_parsers_file
 #   Whether to manage the parser definitions
 #
+# @param multiline_parsers_file
+#   Path for a multiline parsers configuration file. Multiple multiline_parsers_file entries can be used.
+#
 # @param parsers_file
 #   Path for a parsers configuration file. Multiple Parsers_File entries can be used.
 #
@@ -157,6 +160,7 @@ class fluentbit (
   Array[Fluentbit::Plugin] $filter_plugins,
 
   Array[Fluentbit::Parser] $parsers,
+  Array $multiline_parsers,
   Array[Fluentbit::Stream] $streams,
   Array[Stdlib::Absolutepath] $plugins,
 
@@ -168,6 +172,7 @@ class fluentbit (
   Enum['error', 'warning', 'info', 'debug', 'trace'] $log_level,
   Boolean $manage_parsers_file,
   Stdlib::Absolutepath $parsers_file,
+  Stdlib::Absolutepath $multiline_parsers_file,
   Boolean $manage_plugins_file,
   Stdlib::Absolutepath $plugins_file,
   Boolean $manage_streams_file,
