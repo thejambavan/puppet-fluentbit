@@ -200,27 +200,27 @@ class fluentbit (
     -> Class['::fluentbit::config']
     ~> Class['::fluentbit::service']
 
-  $input_plugins.each |$index, $plugin| {
-    $name = $plugin['name']
-
-    Resource["fluentbit::input::${name}"] {
-      "${index}": * => merge($plugin['properties']);
-    }
-  }
-
-  $output_plugins.each |$index, $plugin| {
-    $name = $plugin['name']
-
-    Resource["fluentbit::output::${name}"] {
-      "o${index}": * => merge($plugin['properties']);
-    }
-  }
-
-  $filter_plugins.each |$index, $plugin| {
-    $name = $plugin['name']
-
-    Resource["fluentbit::filter::${name}"] {
-      "f${index}": * => merge($plugin['properties']);
-    }
-  }
+    #   $input_plugins.each |$index, $plugin| {
+    #     $name = $plugin['name']
+    # 
+    #     Resource["fluentbit::input::${name}"] {
+    #       "${index}": * => merge($plugin['properties']);
+    #     }
+    #   }
+    # 
+    #   $output_plugins.each |$index, $plugin| {
+    #     $name = $plugin['name']
+    # 
+    #     Resource["fluentbit::output::${name}"] {
+    #       "o${index}": * => merge($plugin['properties']);
+    #     }
+    #   }
+    # 
+    #   $filter_plugins.each |$index, $plugin| {
+    #     $name = $plugin['name']
+    # 
+    #     Resource["fluentbit::filter::${name}"] {
+    #       "f${index}": * => merge($plugin['properties']);
+    #     }
+    #   }
 }
